@@ -1,11 +1,13 @@
-import { FaArrowDown } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaArrowDown } from "react-icons/fa";
 import { motion } from "framer-motion";
 import image from "../assets/image.png";
 
 function Hero() {
   return (
-    <section className="relative min-h-screen bg-slate-900 text-white flex items-center px-8 overflow-hidden">
-
+    <section
+      id="home"
+      className="relative min-h-screen bg-slate-900 text-white flex items-center px-8 overflow-hidden"
+    >
       {/* Background Glow */}
       <div className="absolute top-20 -left-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-10 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
@@ -36,17 +38,47 @@ function Hero() {
             I enjoy creating clean, responsive and user-friendly apps.
           </p>
 
+          {/* Buttons */}
           <div className="mt-10 flex flex-wrap justify-center md:justify-start gap-5">
 
-            <button className="bg-cyan-500 hover:bg-cyan-400 hover:scale-105 transition-all duration-300 px-7 py-3 rounded-xl shadow-lg shadow-cyan-500/30">
+            <a
+              href="#projects"
+              className="bg-cyan-500 hover:bg-cyan-400 hover:scale-105 transition-all duration-300 px-7 py-3 rounded-xl shadow-lg shadow-cyan-500/30"
+            >
               View Projects
-            </button>
+            </a>
 
-            <button className="border border-cyan-500 hover:bg-cyan-500 hover:scale-105 transition-all duration-300 px-7 py-3 rounded-xl">
+            <a
+              href="/resume.pdf"
+              download
+              className="border border-cyan-500 hover:bg-cyan-500 hover:text-black hover:scale-105 transition-all duration-300 px-7 py-3 rounded-xl"
+            >
               Download Resume
-            </button>
+            </a>
 
           </div>
+
+          {/* Social Icons */}
+          <div className="flex justify-center md:justify-start gap-6 mt-8">
+
+            <a
+              href="https://github.com/Sonuku75"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="text-3xl hover:text-cyan-400 hover:scale-110 transition-all duration-300" />
+            </a>
+
+            <a
+              href="https://linkedin.com/in/sonu-kumar-b7a757343/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="text-3xl hover:text-cyan-400 hover:scale-110 transition-all duration-300" />
+            </a>
+
+          </div>
+
         </motion.div>
 
         {/* Right Side */}
