@@ -1,4 +1,8 @@
+import { FaMoon, FaSun } from "react-icons/fa";
+import { useTheme } from "../context/ThemeContext";
 function Navbar() {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <nav className="fixed top-0 left-0 w-full bg-slate-900/80 backdrop-blur-md text-white z-50 border-b border-slate-800">
 
@@ -12,7 +16,9 @@ function Navbar() {
 
         {/* Menu */}
 
-        <ul className="flex gap-10 text-lg">
+        <div className="flex items-center gap-8">
+
+  <ul className="flex gap-10 text-lg">
 
           <li className="hover:text-cyan-400 transition duration-300 cursor-pointer">
             About
@@ -31,6 +37,13 @@ function Navbar() {
           </li>
 
         </ul>
+        <button
+  onClick={toggleTheme}
+  className="text-2xl text-cyan-400 hover:scale-110 transition"
+>
+  {theme === "dark" ? <FaSun /> : <FaMoon />}
+</button>
+</div>
 
       </div>
 
