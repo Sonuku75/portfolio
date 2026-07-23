@@ -11,29 +11,30 @@ import ScrollProgress from "./components/ScrollProgress";
 
 function App() {
   return (
-  <ThemeProvider>
+    <ThemeProvider>
+      <ScrollProgress />
 
-    <ScrollProgress />
-    <Toaster
-  position="top-right"
-  toastOptions={{
-    duration: 3000,
-    style: {
-      background: "#0f172a",
-      color: "#fff",
-      border: "1px solid #06b6d4",
-    },
-  }}
-/>
-    <Navbar />
-    <Hero />
-    <About />
-    <Skills />
-    <Projects />
-    <Contact />
-    <Footer />
-  </ThemeProvider>
-);
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 3000,
+          style: {
+            background: "#0f172a",
+            color: "#fff",
+            border: "1px solid #06b6d4",
+          },
+        }}
+      />
+
+      <Navbar />
+      <Hero />
+      <About />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+    </ThemeProvider>
+  );
 }
 
 export default App;

@@ -5,9 +5,10 @@ import image from "../assets/image.png";
 function Hero() {
   return (
     <section
-      id="home"
-      className="relative min-h-screen bg-slate-900 text-white flex items-center px-8 overflow-hidden"
-    >
+  id="home"
+  className="relative min-h-screen bg-white text-black dark:bg-slate-900 dark:text-white flex items-center px-8 overflow-hidden"
+>
+    
       {/* Background Glow */}
       <div className="absolute top-20 -left-32 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-10 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
